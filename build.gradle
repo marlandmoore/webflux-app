@@ -1,0 +1,30 @@
+apply plugin: 'application'
+
+version = '1.0'
+description = "WebFluxApplication"
+
+application {
+	mainClassName = 'com.app.WebFluxApplication'
+}
+
+repositories {
+	mavenCentral()   	   
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.4.2', ext: 'pom'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.4.2'
+
+    // https://mvnrepository.com/artifact/io.github.resilience4j/resilience4j-circuitbreaker
+    compile group: 'io.github.resilience4j', name: 'resilience4j-circuitbreaker', version: '1.7.0'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.4.2'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+	
+}
