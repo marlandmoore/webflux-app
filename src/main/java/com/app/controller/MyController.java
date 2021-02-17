@@ -18,7 +18,7 @@ public class MyController {
     private MyService service;
     
     @GetMapping("/hello")
-    public String handle(@RequestParam String name) {
+    public String handle(@RequestParam(required = false) String name) {
       service = new MyService();
       return service.callService(name);
     }
