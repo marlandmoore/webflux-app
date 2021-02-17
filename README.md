@@ -11,11 +11,7 @@ mvn install <br/>
 code is in target directory <br/>
 run using "java -jar rest-service-0.1.0.jar" <br/>
 </p>
-<p>
-This builds and runs gradle build <br/>
-docker build -t web-app .  <br/>
-docker run -d -p 8080:8080 --name web-app web-app <br/>
-</p>
+
 <p>
 Create Dockerfile outside of project folder <br/>
  <br/>
@@ -27,4 +23,9 @@ RUN gradle build --no-daemon  <br/>
 EXPOSE 8080  <br/>
 CMD ["gradle","run"]  <br/>
   
+</p>
+<p>
+This builds and runs gradle build <br/>
+docker build -t web-app .  <br/>
+docker run -d -p 8080:8080 --name web-app web-app <br/>
 </p>
